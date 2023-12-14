@@ -93,3 +93,25 @@ void pop(stack_t **stack, unsigned int line_number)
       (*stack)->prev = NULL;
   free(temp);
 }
+/**
+ * add - opcode and its function
+ * @stack: the opcode
+ * @line_number: function to handle the opcode
+ *
+ * Description: opcode and its  function
+ * for stack, queues, LIFO, FIFO
+ */
+void add(stack_t **stack, unsigned int line_number)
+{
+   int sum;
+
+   if (*stack == NULL || (*stack)->next == NULL)
+   {
+       fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
+       exit(EXIT_FAILURE);
+   }
+
+   sum = (*stack)->n + (*stack)->next->n;
+   (*stack)->next->n = sum;
+   pop(stack, line_number);
+}
