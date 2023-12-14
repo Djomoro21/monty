@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * pall - Print list
- * @stack: Double linked list
- * @line_number: File line execution
+ * pall - Pfdgdfg dfgdst
+ * @stack: Dofdgfdg dfgdgdlist
+ * @line_number: Filfdgdfg dfgfdgution
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
@@ -19,9 +19,9 @@ void pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * push - Insert a new value in list
- * @stack: Double linked list
- * @line_number: File line execution
+ * push - Insdfgdg dgdgdflist
+ * @stack: Doudfgdg dgfdgist
+ * @line_number: Fifdgdfg ddgdgecution
  */
 void push(stack_t **stack, unsigned int line_number)
 {
@@ -62,9 +62,9 @@ void push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pint - Print last node
- * @stack: Double linked list
- * @line_number: File line execution
+ * pint - Prdfgd dgdgdde
+ * @stack: Dodgdgfd dgdfgist
+ * @line_number: Figdd dfgdggution
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
@@ -78,9 +78,9 @@ void pint(stack_t **stack, unsigned int line_number)
 }
 
 /**
-* pop - Delete top of list
-* @stack: Double linked list
-* @line_number: File line execution
+* pop - Degdd gdfgdfgdgst
+* @stack: Dogdfgd gdgdgdst
+* @line_number: Fgdfgd dgdgdgution
 */
 void pop(stack_t **stack, unsigned int line_number)
 {
