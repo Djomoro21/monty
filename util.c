@@ -49,8 +49,7 @@ instruction_t *create_instru()
 	ptr[13].opcode = "rotl", ptr[13].f = rotl;
 	ptr[14].opcode = "rotr", ptr[14].f = rotr;
 	ptr[15].opcode = "stack", ptr[15].f = stack;
-	ptr[16].opcode = "queue", ptr[16].f = queue;
-	ptr[17].opcode = NULL, ptr[17].f = NULL;
+	ptr[16].opcode = NULL, ptr[17].f = NULL;
 
 	return (ptr);
 }
