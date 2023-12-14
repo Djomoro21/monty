@@ -54,7 +54,7 @@ typedef struct instruction_s
  * @line_number: Stores file current line
  * @MODE: Program configuration stack or queue
  */
-typedef struct glob_var
+typedef struct my_var
 {
 	FILE *file;
 	char *buff;
