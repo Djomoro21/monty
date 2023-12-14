@@ -1,31 +1,31 @@
 #include "monty.h"
 /**
- * pall - Print list
+ * pall - Pall list
  * @stack: Double linked list
  * @line_number: File line execution
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp = *stack;
+	stack_t *temp = *stack;
 	(void) line_number;
 
-	if (!tmp)
+	if (!temp)
 		return;
-	while (tmp)
+	while (temp)
 	{
-		printf("%d\n", tmp->n);
-		tmp = tmp->next;
+		printf("%d\n", temp->n);
+		temp = temp->next;
 	}
 }
 
 /**
- * push - Insert a new value in list
+ * push - Inseubnnjk hjjne in list
  * @stack: Double linked list
  * @line_number: File line execution
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp = NULL, *tm = *stack;
+	stack_t *temp = NULL, *tm = *stack;
 	char *num;
 
 	num = strtok(NULL, " \r\t\n");
@@ -35,34 +35,34 @@ void push(stack_t **stack, unsigned int line_number)
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-	tmp = malloc(sizeof(stack_t));
-	if (!tmp)
+	temp = malloc(sizeof(stack_t));
+	if (!temp)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-	tmp->n = atoi(num);
+	temp->n = atoi(num);
 	if (var.MODE == 0 || !*stack)
 	{
-		tmp->next = *stack;
-		tmp->prev = NULL;
+		temp->next = *stack;
+		temp->prev = NULL;
 		if (*stack)
-			(*stack)->prev = tmp;
-		*stack = tmp;
+			(*stack)->prev = temp;
+		*stack = temp;
 	}
 	else
 	{
 		while (tm->next)
 			tm = tm->next;
 		tm->next = tmp;
-		tmp->prev = tm;
-		tmp->next = NULL;
+		temp->prev = tm;
+		temp->next = NULL;
 	}
 }
 
 /**
- * pint - Print last node
+ * pint - Pribuhbuh bjbh node
  * @stack: Double linked list
  * @line_number: File line execution
  */
@@ -78,13 +78,13 @@ void pint(stack_t **stack, unsigned int line_number)
 }
 
 /**
-* pop - Delete top of list
+* pop - Delugyuh buhu ubuist
 * @stack: Double linked list
 * @line_number: File line execution
 */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp;
+	stack_t *temp;
 
 	if (!*stack)
 	{
@@ -93,9 +93,9 @@ void pop(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	tmp = *stack;
-	*stack = tmp->next;
-	if (tmp->next)
-		tmp->next->prev = NULL;
+	temp = *stack;
+	*stack = temp->next;
+	if (temp->next)
+		temp->next->prev = NULL;
 	free(tmp);
 }

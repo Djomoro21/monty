@@ -7,7 +7,7 @@
  */
 void swap(stack_t **stack, unsigned int line_number)
 {
-	int tmp;
+	int temp;
 
 	if (!*stack || !(*stack)->next)
 	{
@@ -16,9 +16,9 @@ void swap(stack_t **stack, unsigned int line_number)
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-	tmp = (*stack)->n;
+	temp = (*stack)->n;
 	(*stack)->n = (*stack)->next->n;
-	(*stack)->next->n = tmp;
+	(*stack)->next->n = temp;
 }
 
 /**
