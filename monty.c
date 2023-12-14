@@ -39,23 +39,24 @@ void push(stack_t **head, unsigned int line_number)
 		addqueue(head, n);
 }
 /**
- * pall - opcode and its function
- * @stack: the opcode
- * @line_number: function to handle the opcode
- *
- * Description: opcode and its pall function
- * for stack, queues, LIFO, FIFO
- */
-void pall(stack_t **stack, unsigned int line_number)
+ * pall - prints the stack
+ * @head: stack head
+ * @counter: no used
+ * Return: no return
+*/
+void pall(stack_t **head, unsigned int counter)
 {
-   stack_t *temp = *stack;
+	stack_t *h;
+	(void)counter;
 
-   (void)line_number;
-   while (temp != NULL)
-   {
-       printf("%d\n", temp->n);
-       temp = temp->next;
-   }
+	h = *head;
+	if (h == NULL)
+		return;
+	while (h)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
 }
 /**
  * pint - opcode and its function
